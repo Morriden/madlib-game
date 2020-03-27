@@ -1,4 +1,15 @@
 /* well need to default our text box for the mad lib to be visibility:hidden */
 .madlib-container {
-    display: none
+    display: none;
+    background-color: forestgreen;
+    font-family: fantasy;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: burlywood;
 }
