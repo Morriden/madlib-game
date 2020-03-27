@@ -21,11 +21,11 @@ const nounOne = document.getElementById('noun-one');
 const nounTwo = document.getElementById('noun-two');
 const nounPlural = document.getElementById('noun-plural');
 // well need spans as well to put the words into the madlib
-
+const adjectiveInputOneSpan = document.getElementById('adjective-one-span');
 //well need the container that holds the madlib
-document.getElementById('madlib-container');
+const madlibContainer = document.getElementById('madlib-container');
 // well need the container that holds all the inputs from the USER
-
+const inputContainer = document.getElementById('input-container');
 // well need the button so we can add the event listener
 const myButton = document.getElementById('button');
 //ADD EVENT LISTENERS
@@ -52,12 +52,16 @@ function readersAnswers() {
     const nounTwoValue = nounTwo.value;
     const nounPluralValue = nounPlural.value;
 
-    console.log('something', nameOneValue);
+    adjectiveInputOneSpan.textContent = adjectiveInputOneValue;
+
+    //console.log('something', nameOneValue); WORKS
 
 
 
         //use the input values to SET the value of our spans
         //hide the input container
+    inputContainer.style.display = 'none';
         //reveal the mad lib container
+    madlibContainer.style.display = 'block';
 }
 myButton.addEventListener('click', readersAnswers);
